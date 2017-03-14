@@ -1,12 +1,192 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>Pink_Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/outlines.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+
+  <header class="page-header">
+
+    <div class="page-header__inner">
+
+      <div class="page-header__top">
+
+        <div class="page-header__logo">
+          <img  src="/img/logo-pink-white-mobile.svg" width="310" height="95" alt="Pink">
+        </div>
+
+        <nav class="main-nav">
+
+          <button  class="main-nav__trigger" type="button"><span></span></button>
+
+          <ul class="main-nav__list">
+
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://Photo.html.html">Фотографии</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <div class="start-application">
+
+        <a class="btn start-application__btn" href="http://www.apple.com/ru/itunes/download/">Скачать приложение</a>
+
+        <div class="start-application__top">
+
+          <ul class="start-application__list">
+            <li class="start-application__item"><a href="http://www.apple.com/ru"><svg></svg></a></li>
+            <li class="start-application__item"><a href="https://www.android.com/ru"><svg></svg></a></li>
+            <li class="start-application__item"><a href="https://www.microsoft.com/ru-ru"><svg></svg></a></li>
+          </ul>
+
+          <div class="start-application__message">
+
+          <p class="start-application__message-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </header>
+
+
+  <div class="page-main">
+
+    <div class="container">
+
+      <section class="information">
+        <div class="information__inner">
+
+          <div class="information__list">
+            <p class="information__item">Устали от серости мегаполиса?</p>
+            <p class="information__item">Нам есть, что вам предложить!</p>
+          </div>
+
+          <section class="our-features">
+
+            <div class="our-features__item">
+              <h2 class="our-features__title">Поднимает настроение</h2>
+              <p class="our-features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </div>
+
+            <div class="our-features__item">
+              <h2 class="our-features__title">Меняет мир вокруг</h2>
+              <p class="our-features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
+
+            <div class="our-features__item">
+              <h2 class="our-features__title">Заводит новых друзей</h2>
+              <p class="our-features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
+
+          </section>
+
+          <div class="information__decorative">
+            <svg class="information__decorative-iphone"></svg>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="reivew">
+        <div class="reivew__inner">
+
+          <div class="reivew__list">
+            <h2 class="reivew__title">Николай Петров</h2>
+            <p class="reivew__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+
+          <div class="reivew__list">
+            <h2 class="reivew__title">Иван Петров</h2>
+            <p class="reivew__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+
+          <div class="reivew__list">
+            <h2 class="reivew__title">Сергей Петров</h2>
+            <p class="reivew__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <article class="price">
+        <div class="price__inner">
+
+          <table class="price__table">
+            <tr class="price__table-row">
+              <td class="price__table-cell">Стандарт <span class="price__table-detail">3,99 USD</span></td>
+            </tr>
+
+            <tr class="price__table-row">
+              <td class="price__table-cell">Розовый фильтр<span class="price__table-item"></span></td>
+            </tr>
+
+            <tr class="price__table-row">
+              <td class="price__table-cell">Смайлики<span class="price__table-item"></span></td>
+            </tr>
+
+            <tr class="price__table-row">
+              <td class="price__table-cell">Комментарии<span class="price__table-item"></span></td>
+            </tr>
+          </table>
+
+        </div>
+
+      </article>
+
+      <article class="contacts">
+        <div class="contacts__inner">
+          <p class="contacts__head">Остались вопросы? Свяжитесь с нами!</p>
+
+          <div class="contacts__email">
+            <b class="contacts__title">Звоните:</b>
+            <a class="contacts__text" href="tel:+78125556666">тел. +7 (812) 555-66-66</a>
+          </div>
+
+          <div class="contacts__email">
+            <b class="contacts__title">Пишите:</b>
+            <a class="contacts__text" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </div>
+
+          <div class="contacts__address">
+            <b class="contacts__title">Приезжайте в гости:</b>
+            <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1392.944960043567!2d30.321848183359748!3d59.93919749875491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1488484026945" width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+    </div>
+
+  </div>
+
 
   </body>
 </html>
