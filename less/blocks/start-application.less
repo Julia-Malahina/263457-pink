@@ -1,4 +1,70 @@
 .start-application {
+  min-width: 320px;
+  max-height: 270px;
+  margin: 0;
+  padding: 0;
+
   background-color: @bg-darkblue;
-  height: 270px;
+  color: @white;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.start-application_inner {
+  .container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-application__btn {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.start-application__btn--change  {
+  color: @white;
+  border: 2px solid @white ;
+}
+
+.start-application__btn--change:hover {
+  color: @pink;
+  background-color: @white;
+}
+
+.start-application__btn--change:active {
+  color: @btn-lightpink;
+  background-color: @white;
+}
+
+.start-application__list {
+  max-width: 220px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.start-application__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.start-application__item:nth-child(1),
+.start-application__item:nth-child(2) {
+  padding-right: 33px;
+}
+
+.start-application__text {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+
+  font-family: @font-family;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: lighter;
+  text-align: center;
 }
