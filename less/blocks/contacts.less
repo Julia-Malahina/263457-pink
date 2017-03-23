@@ -42,3 +42,62 @@
   color: @pink;
   text-align: center;
 }
+
+//Планшетная версия
+
+@media @tablet-widths {
+  .contacts {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contacts__inner {
+    .container-fluid;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+
+  }
+
+  .contacts__head {
+    padding-bottom: 55px;
+    font-size: 40px;
+  }
+
+  .contacts__info {
+    width: 275px;
+    padding-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .contacts__info:nth-child(3) {
+    width: 475px;
+    margin: 0 auto;
+  }
+
+  .contacts__title {
+    padding-bottom: 15px;
+  }
+
+  .contacts__text {
+    padding-bottom: 57px;
+  }
+
+}
+
+
+//Мониторная версия
+
+@media @desktop-widths {
+
+}

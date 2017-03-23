@@ -1,5 +1,5 @@
 .our-features {
-  max-width: 320px;
+  width: auto;
   margin-top: 120px;
   padding-top: 60px;
 
@@ -33,5 +33,127 @@
   line-height: @line-height;
   font-weight: @font-weight-n;
   text-align: center;
+}
+
+.our-features__img-ifone {
+  width: 157px;
+  height: 320px;
+  margin: 0 auto;
+  display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
+  //align-content: center;
+}
+
+.benefits {
+  display: none;
+}
+
+
+//Планшетная версия
+
+@media @tablet-widths {
+  .our-features {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .our-features__inner {
+    .container-fluid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .our-features__wrapper {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+
+
+  .our-features__item {
+    width: 310px;
+    margin-bottom: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .our-features__title {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .our-features__text {
+    text-align: left;
+
+  }
+
+  .our-features__img-ifone {
+    margin: 0;
+  }
+
+  .benefits {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .benefits__inner {
+    .container-fluid();
+
+    display: table-header-group;
+  }
+
+  .benefits__info {
+    width: 300px;
+  }
+
+  .benefits__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefits__head {
+    margin-bottom: 24px;
+    font-family: @font-family;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: @font-weight-b;
+  }
+
+  .benefits__text {
+    margin-bottom: 20px;
+    font-family: @font-family;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: @font-weight-n;
+
+  }
+
+  .benefits__link {
+    margin-bottom: 20px;
+    font-family: @font-family;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: @font-weight-n;
+  }
+
+
+  .benefits__link a{
+      text-decoration: underline;
+      color: @pink;
+    }
+
+
+}
+
+
+//Мониторная версия
+
+@media @desktop-widths {
+
 }
 

@@ -4,8 +4,7 @@
 }
 
 .information__inner {
-  padding-left: 20px;
-  padding-right: 20px;
+  .container ();
 }
 
 .information__list {
@@ -23,6 +22,32 @@
   font-size: 24px;
   line-height: normal;
   text-transform: uppercase;
+}
 
+//Планшетная версия
+
+@media @tablet-widths {
+
+  .information__inner {
+  .container-fluid ();
+  }
+
+  .information__item {
+    margin-top: 60px;
+    font-size: 40px;
+  }
+
+
+}
+
+
+//Мониторная версия
+
+@media @desktop-widths {
+
+  .information__item {
+    margin-top: 80px;
+    font-size: 50px;
+  }
 
 }
