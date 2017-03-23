@@ -1,0 +1,327 @@
+.main-nav {
+  position: relative;
+  top: 65px;
+
+  width: auto;
+  min-height: 50px;
+
+  display: flex;
+
+}
+//
+//.main-nav__dropdown  {
+//  position: static;
+//  top: 50px;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  //z-index: 20;
+//  //display: none;
+//  min-width: 320px;
+//  max-height: 350px;
+//  //background-color: rgba(45,45,68,.97);
+//}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+//базовые стили для переключателя
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 114px;
+  z-index: 2;
+
+  display: block;
+  width: 70px;
+  height: 50px;
+
+
+  font-size: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  border: none;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    background-color: transparent;
+
+  }
+}
+
+//состояние закрытого переключателя - гамбургер-белые полосочки
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: -55px;
+  left: 114px;
+
+  width: 36px;
+  height: 2px;
+
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff,
+  0 16px 0 0 #ffffff;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3),
+  0 16px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+//Поменяем переключатель на «навигация открыта -- это крестик
+
+
+.main-nav--opened .main-nav__toggle {
+  top: -55px;
+  right: 0;
+  left: 114px;
+  background-color: @fon-darkblue;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 18px;
+
+    width: 36px;
+    height: 2px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+//стили для ссылок в меню сайта
+
+.main-nav__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 25px 21px;
+  padding-bottom: 13px;
+
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: @fon-darkblue;
+  border-top: 1px solid @black;
+  border-bottom: 1px solid @black;
+}
+
+.main-nav__link a[href] {
+  &:hover {
+
+    color: @pink;
+  }
+
+  &:active {
+    color: @btn-lightpink;
+
+
+    border-top-color: #6a4d38;
+  }
+}
+
+//Открытие и закрытие
+
+@media @mobile-widths-only {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+  &--active {
+    display: block;
+  }
+  .main-nav--closed .main-nav__item--active a {
+    padding-right: 70px;
+    padding-left: 70px;
+    text-align: center;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__dropdown {
+    position: fixed;
+
+    height: auto;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__item--active a {
+    padding-right: 21px;
+    padding-left: 21px;
+
+    text-align: left;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+
+    height: auto;
+  }
+}
+
+
+
+@media @tablet-widths {
+  .main-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .main-nav__inner {
+    .container();
+  }
+
+  .main-nav__list  {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 0;
+    right: auto;
+    left: 555px;
+    background-color: @fon-darkblue;
+  }
+
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+  &--active {
+    display: block;
+  }
+  .main-nav--closed .main-nav__item--active a {
+    padding-right: 70px;
+    padding-left: 70px;
+
+    text-align: center;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__dropdown {
+    position: fixed;
+
+    height: auto;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__item--active a {
+    padding-right: 21px;
+    padding-left: 21px;
+
+    text-align: left;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+
+    height: auto;
+  }
+
+
+}
+
+@media @desktop-widths {
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    width: 660px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+
+  .main-nav__link {
+    color: @white;
+    font-family: @font-family;
+    font-weight: @font-weight-n;
+    font-size: 18px;
+    line-height: 18px;
+    border: none;
+
+    &:hover {
+      color: @pink;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

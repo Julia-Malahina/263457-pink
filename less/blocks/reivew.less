@@ -1,0 +1,33 @@
+.reivew__inner {
+  .container();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.reivew__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.reivew__list:nth-child(2),
+.reivew__list:nth-child(3){
+  display: none;
+}
+
+.reivew__title {
+  margin-bottom: 25px;
+  font-family: @font-family;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: @font-weight-b;
+  text-align: center;
+}
+
+.reivew__text {
+  font-family: @font-family;
+  font-size: @font-size-base;
+  line-height: 30px;
+  font-weight: @font-weight-n;
+  text-align: center;
+}

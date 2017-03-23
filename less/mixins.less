@@ -1,12 +1,30 @@
 .container() {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
 
+  display: block;
+  max-width: 1200px;
+
   @media @tablet-widths {
-    width: 640px;
+    width: 660px;
   }
 
   @media @desktop-widths {
     width: 960px;
   }
 }
+
+//резиновый центровщик
+
+.container-fluid () {
+  width: auto;
+
+  @media @tablet-widths {
+    width: 88%;        /* 620px / 700px ~= 88% */
+    max-width: 960px;  /* 960px / .95 ~= 844px (центровка начнётся чуть раньше 1200px) */
+    margin: 0 auto;
+  }
+
+}
+
+

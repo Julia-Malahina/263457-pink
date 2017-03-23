@@ -1,0 +1,142 @@
+.price {
+  margin-top: 130px;
+  padding-top: 65px;
+  padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: @lightgray;
+}
+
+.price__inner {
+  .container();
+  display: flex;
+  flex-direction: row;
+}
+
+.price__table:nth-child(2),
+.price__table:nth-child(3),
+.price__table:nth-child(4),
+.price__table:nth-child(5){
+  display: none;
+}
+
+.price__table {
+  width: 280px;
+  border: 1px solid #e5e5e5;
+}
+
+.price__table-row {
+
+}
+
+.price__table-cell:nth-child(1) {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: @top-darkblue;
+  color: @white;
+  font-family: @font-family;
+  font-size: 18px;
+  line-height: @line-height;
+  font-weight: @font-weight-b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.price__table-cell:nth-child(2),
+.price__table-cell:nth-child(3) {
+  border-bottom: 1px solid #e5e5e5;
+
+}
+
+.price__table-cell:nth-child(2),
+.price__table-cell:nth-child(3),
+.price__table-cell:nth-child(4) {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+  background-color: @white;
+}
+
+.price__table-detail {
+  padding-top: 10px;
+  font-family: @font-family;
+  font-size: 24px;
+  line-height: @line-height;
+  font-weight: @font-weight-l;
+}
+
+//Планшетная версия
+
+@media @tablet-widths {
+  .price {
+    //display: table;
+
+    width: 100%;
+
+    padding-top: 65px;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    border: 1px solid #e5e5e5;
+  }
+
+  .price__inner {
+    .container-fluid;
+    display: flex;
+    flex-direction: row;
+  }
+  .price__table {
+    width: 100%;
+
+    border: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price__table-cell {
+    width: auto;
+    border: 1px solid #e5e5e5;
+  }
+
+  .price__table:nth-child(2) .price__table-cell:nth-child(1) {
+    max-height: 140px ;
+    background-color: @lightgray;
+    padding: 0;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-content: flex-start;
+  }
+  .price__table:nth-child(2) .price__table-cell:nth-child(2),
+  .price__table:nth-child(2) .price__table-cell:nth-child(3),
+  .price__table:nth-child(2) .price__table-cell:nth-child(4) {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .price__table:nth-child(1) {
+    display: none;
+  }
+
+  .price__table:nth-child(2),
+  .price__table:nth-child(3),
+  .price__table:nth-child(4),
+  .price__table:nth-child(5){
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+  }
+
+
+}
+
+
+//Мониторная версия
+
+@media @desktop-widths {
+
+}

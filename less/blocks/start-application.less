@@ -1,4 +1,163 @@
 .start-application {
-  background-color: @bg-darkblue;
-  height: 270px;
+  min-width: 320px;
+  max-height: 270px;
+  margin: 0;
+  padding: 0;
+
+  background-color: @top-darkblue;
+  color: @white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.start-application__inner {
+  .container();
+
+  display: flex;
+  flex-direction: column;
+}
+
+.start-application__head {
+  display: none;
+}
+
+.start-application__btn {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.start-application__btn--change  {
+  color: @white;
+  border: 2px solid @white ;
+}
+
+.start-application__btn--change:hover {
+  color: @pink;
+  background-color: @white;
+}
+
+.start-application__btn--change:active {
+  color: @btn-lightpink;
+  background-color: @white;
+}
+
+.start-application__list {
+  max-width: 220px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.start-application__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  //align-items: center;
+}
+.start-application__item:nth-child(1),
+.start-application__item:nth-child(2) {
+  padding-right: 33px;
+}
+
+.start-application__text {
+  margin: 0 auto;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  font-family: @font-family;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+//планшетная версия
+
+@media @tablet-widths {
+  .start-application {
+    width: 300px;
+    height: 410px;
+    margin-top: 0;
+    margin-bottom: 110px;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: transparent;
+  }
+
+  .start-application__inner {
+    .container-fluid ();
+  }
+
+  .start-application__head {
+    margin: 0;
+    margin-bottom: 40px;
+    display: block;
+    text-align: center;
+  }
+
+  .start-application__btn {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  .start-application__text {
+    margin: auto;
+    padding: inherit;
+  }
+
+
+
+}
+
+
+@media @desktop-widths {
+  .start-application {
+    width: 300px;
+    max-height: 625px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+  .start-application__head {
+    display: block;
+    margin: 0;
+    margin-bottom: 60px;
+
+    font-family: @font-family;
+    font-size: 50px;
+    line-height: normal;
+    font-weight: @font-weight-n;
+    text-align: center;
+  }
+  .start-application__btn {
+    margin: 0;
+    margin-bottom: 65px;
+  }
+
+  .start-application__list {
+    margin-bottom: 60px ;
+  }
+
+  .start-application__text {
+    margin: 0;
+    margin-bottom: 125px;
+  }
+
+
+
+
 }
