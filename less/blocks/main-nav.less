@@ -23,16 +23,18 @@
 //}
 
 .main-nav__list {
-  margin: 0;
+  width: auto;
+  margin: 0 auto;
   padding: 0;
 }
 
 //базовые стили для переключателя
 .main-nav__toggle {
+  //transition:  transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   position: absolute;
-  top: 0;
+  top: -50px;
   right: 0;
-  left: 114px;
+  left: -45px;
   z-index: 2;
 
   display: block;
@@ -62,8 +64,8 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: -55px;
-  left: 114px;
+  top: 0;
+  left: 0;
 
   width: 36px;
   height: 2px;
@@ -83,9 +85,9 @@
 
 
 .main-nav--opened .main-nav__toggle {
-  top: -55px;
+  top: -59px;
   right: 0;
-  left: 114px;
+  left: 100px;
   background-color: @fon-darkblue;
 
   &::before,
